@@ -1,19 +1,19 @@
 require 'rails_helper'
-
-RSpec.describe 'Homes', type: :system do
+ 
+RSpec.describe 'Home', type: :system do
   before do
     driven_by(:rack_test)
   end
-
+ 
   describe 'トップページの検証' do
-    it 'Home#top が表示されること' do
+    it 'Home#topという文字列が表示される' do
       visit '/'
-
+ 
       expect(page).to have_content('Home#top')
     end
   end
-
-   describe 'ナビゲーションバーの検証' do
+ 
+  describe 'ナビゲーションバーの検証' do
     context 'ログインしていない場合' do
       before { visit '/' }
  
@@ -23,6 +23,10 @@ RSpec.describe 'Homes', type: :system do
  
       it 'ログインリンクを表示する' do
         expect(page).to have_link('ログイン', href: '/users/sign_in')
+      end
+ 
+      it 'ログ投稿リンクを表示しない' do # 追加
+        expect(page).not_to have_link('ログ投稿', href: '/posts/new')
       end
  
       it 'ログアウトリンクは表示しない' do
@@ -43,6 +47,10 @@ RSpec.describe 'Homes', type: :system do
  
       it 'ログインリンクは表示しない' do
         expect(page).not_to have_link('ログイン', href: '/users/sign_in')
+      end
+ 
+      it 'ログ投稿リンクを表示する' do # 追加
+        expect(page).to have_link('ログ投稿', href: '/posts/new')
       end
  
       it 'ログアウトリンクを表示する' do
