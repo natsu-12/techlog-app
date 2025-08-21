@@ -1,24 +1,24 @@
-# README
+アプリ概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TechLog は、プログラミング学習を記録・振り返り、成長を可視化するためのアプリです。
+「日々学んだことを残し、積み上げを実感できる環境を作りたい」という思いから開発しました。
+学習中に感じた、難しく感じた点や、できるようになったことを見返すことで、今後の学習に役立つと
+いう考えから、シンプルかつ直感で扱えるように導線を意識しました。
+またRspecでのテスト駆動開発を行い、より現場を意識した開発を心がけました。
 
-Things you may want to cover:
+主な機能
+	•	ユーザー認証（Devise）
+	•	新規登録・ログイン・ログアウト
+	•	投稿機能（Post）
+	•	タイトルと内容を入力して学習内容を記録
+	•	一覧表示・詳細表示・削除
+	•	ユーザー詳細ページ
+	•	ニックネームの表示
+	•	投稿履歴の確認
 
-* Ruby version
+使用技術
+	•	フレームワーク: Ruby on Rails 8.0
+	•	認証: Devise
+	•	データベース: PostgreSQL　neon
+	•	デプロイ: Render
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
